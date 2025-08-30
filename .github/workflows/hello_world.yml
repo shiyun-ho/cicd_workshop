@@ -14,5 +14,11 @@ jobs:
         # runs bash/zsh/cli tool
           run: echo "Current time in Github is $(date)"
         - id: s01
-          run: cat ../hello.txt
-
+          uses: mscoutermarsh/cowsays-action@master
+          with:
+            text: 'ship ship ship!'
+            color: 'red'
+        # - id: s01
+        #   run: ls -l
+        # - id: s02
+        #   run: cat hello.txt
