@@ -14,7 +14,7 @@ jobs:
         # runs bash/zsh/cli tool
           run: echo "Current time in Github is $(date), GITHUB_OUTPUT is $(GITHUB_OUTPUT)"
         - id: s01
-          run: echo "CURR_DATE = $(date)" >> $(GITHUB_OUTPUT)"
+          run: echo "CURR_DATE = $(date)" >> $GITHUB_OUTPUT
         - id: s02
           uses: mscoutermarsh/cowsays-action@master
           with:
