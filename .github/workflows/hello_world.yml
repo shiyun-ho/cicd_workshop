@@ -13,4 +13,6 @@ jobs:
         - id: s00
         # runs bash/zsh/cli tool
           run: echo "Current time in Github is $(date)"
+        - id: s01
+          run: cat hello.txt
 
