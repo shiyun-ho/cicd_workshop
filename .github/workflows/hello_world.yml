@@ -12,13 +12,11 @@ jobs:
         steps:
         - id: s00
         # runs bash/zsh/cli tool
-          run: echo "Current time in Github is $(date)"
+          run: echo "Current time in Github is $(date), GITHUB_OUTPUT is $(GITHUB_OUTPUT)"
         - id: s01
+          run: echo "CURR_DATE = $(date)" >> $(GITHUB_OUTPUT)"
+        - id: s02
           uses: mscoutermarsh/cowsays-action@master
           with:
-            text: 'ship ship ship!'
+            text: 'moo moo cow $${{steps.s01.outputs.CURR_DATE}}'
             color: 'red'
-        # - id: s01
-        #   run: ls -l
-        # - id: s02
-        #   run: cat hello.txt
